@@ -21,7 +21,7 @@ class examples:
         print("points after undistort: \n", points_undistort.reshape(-1, 2))
     
     def mouse_callback(self):
-        global px, py
+        global px, py # if not use global, px here is different from px in onMouse
         px, py = -1, -1
         def onMouse(event, x, y, flags, param):
             global px, py
